@@ -1,0 +1,36 @@
+<!-- Start Main Content Area -->
+
+<div class="login-background">
+
+    <div class="login-container">
+        <div class="col-xl-6 col-lg-6 col-md-3 col-md-12 nopadding login-left">
+            <img src="assets/images/logo.png" class="login-logo">
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-9 col-md-12 nopadding login-right">
+            <div class="login-form">
+                <p class="login-text">Login to your account</p>
+                <form>
+                    <input type="email" name="email" class="login-field email-field" placeholder="Enter Your Email" required/>
+                    <input type="password" name="email" class="login-field password-field" placeholder="Enter Your Password" required/>
+                    <input type="submit" class="login-button">
+                    <div class="sociallogin">
+                        <span class="login-text other-login">or login with: </span>
+                        <a href="#"><span class="icon-login"><i class="fa fa-facebook fb" aria-hidden="true"></i></span></a>
+                        <a href="#"><span class="icon-login"><i class="fa fa-google-plus google" aria-hidden="true"></i></span></a>
+                        <a href="#"><span class="icon-login"><i class="fa fa-twitter twitter" aria-hidden="true"></i></span></a>
+                    </div>
+                    <div class="bottom-login">
+                        <span class="newacc"><a [routerLink]="['/register']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Don't Have an Account?</a></span>
+                        <span><a [routerLink]="['/reset-password']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Forget Password?</a> </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="green-divider"></div>
+<!-- End Main Content Area -->
+
+
+<!-- Complicated code below
+ ================================================== -->

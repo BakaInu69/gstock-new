@@ -1,0 +1,67 @@
+<!-- Start Main Content Area -->
+
+<div class="login-background">
+    <div class="login-container">
+        <div class="col-xs-6 nopadding login-left">
+            <div class="login-form">
+                <p class="login-text">Create a new account!</p>
+                <form>
+                    <input type="email" name="email" class="login-field email-field" placeholder="Enter Your Email" required/>
+                    <input type="password" name="pass" class="login-field password-field" placeholder="Enter Your Password" required/>
+                    <input type="password" name="cfmpass" class="login-field cfmpassword-field" placeholder="Enter Your Password Again" required/>
+                    <input type="text" name="email" class="login-field shopname-field" placeholder="Enter Your Shop Name" id="shopname"required/>
+                    <span><input type="checkbox" id="switch" class="checker" /><label for="switch">Toggle</label></span>
+                    <span class="check-text">Signing up as a Merchant?</span>
+                    <input type="submit" class="login-button">
+                </form>
+                <div class="bottom-reg">
+                   <span class="newacc"> <a [routerLink]="['/login']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Already have an account?</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="or">
+            <h2>or</h2>
+        </div>
+        <div class="col-xs-6 nopadding login-right">
+            <h1>Sign in with your social network!</h1>
+            <a href="#">
+                <div class="social-box fb-bg">
+                Log in with facebook
+                </div>
+            </a>
+            <a href="#"><div class="social-box google-bg">
+                Log in with Google+
+            </div>
+            </a>
+            <a href="#"><div class="social-box twitter-bg">
+                Log in with twitter
+            </div>
+            </a>
+        </div>
+
+
+    </div>
+</div>
+<div class="green-divider"></div>
+<!-- End Main Content Area -->
+
+<!-- Complicated code below
+ ================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var checkbox = $("#switch");
+        var hidden = $("#shopname");
+        hidden.hide();
+
+        checkbox.change(function() {
+            if (checkbox.is(':checked')) {
+                hidden.show()
+            } else {
+                hidden.hide()
+            }
+        });
+    });
+</script>
+
+

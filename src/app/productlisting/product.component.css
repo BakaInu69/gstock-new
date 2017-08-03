@@ -1,0 +1,219 @@
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+/\            /\/\           \/\            /\/          \/\/         /\   \/\/   /\/\/\/
+/\   \/\/\/\/\/\/    \/\/\/\/\/\/\/\/   /\/\/\    /\/\    /\/   /\/\/\/\   \/\   /\/\/\/\
+/\   \/\/\/\/\/\/   /\/\/\/\/\/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\   \    /\/\/\/\/
+/\   \/\      /\/            \/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\       /\/\/\/\/\
+/\   \/\\/\   \/\/\/\/\/\/   /\/\/\/\   \/\/\/    \/\/    \/\   \/\/\/\/   /\   /\/\/\/\/
+/\            /\/           /\/\/\/\/   /\/\/\/          \/\/         /\   \/\   \/\/\/\/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+CSS for Product Listing
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+    1. PROD NAVBAR
+    2. PRE LISTING CONTENT
+    3. SIDEBAR CONTENT
+    4. PRODUCT
+    X. MOBILE RESPONSIVE
+
+
+
+
+/* =================================================================== */
+/* PROD NAVBAR SECTION
+====================================================================== */
+.inner-head-dropdown{
+    font-weight: 300;
+}
+.dropdown-category{
+    padding: 14px 25px 15px 35px;
+}
+.dropdown-container-head-inner{
+    padding-top:0;
+    padding-bottom:0
+}
+.bold-dropdown-content{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hot{
+    margin-top: 11px;
+}
+/* =================================================================== */
+/* PRE LISTING SECTION
+====================================================================== */
+.category-title{
+    background: #008d36;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px 0;
+    margin-top: 12px;
+}
+.category-title>p{
+    margin:0
+}
+
+.tabs-cont{
+    margin: 0;
+    margin-top: 10px;
+}
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+ul.tabs li.current{
+    background: #018d36;
+    color: #fff;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+/* =================================================================== */
+/* BREADCRUMB  SECTION
+====================================================================== */
+ul.breadcrumb {
+    margin-top: 25px;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #fff;
+    font-size: 17px;
+}
+
+ul.breadcrumb li {
+    display: inline;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #008d36;
+    content: "\003e";
+}
+
+ul.breadcrumb li a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* =================================================================== */
+/* PRODUCT  SECTION
+====================================================================== */
+.vert-slider{
+    width: 15%;
+    position: absolute;
+    top: 0
+}
+.main-slider{
+    width: 80%;
+    margin-left: 20%;
+}
+.slick-slide{
+    border: #ebebeb solid 2px;
+    margin-bottom: 10px;
+}
+.fa-angle-left{
+    color: #fff;
+    font-size: 24px;
+}
+.product-title{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+
+}
+.review{
+    float: left;
+}
+a.fav > .fa + .fa,
+a.fav:hover > .fa {
+    display: none;
+}
+a.fav:hover > .fa + .fa {
+    display: inherit;
+    color: #ff0000;
+}
+.star>a>i{
+    color: #fbc02d;
+}
+.wishlist{
+    float: right;
+}
+.fav-icon{
+    font-size: 28px;
+}
+.wishlist-span{
+    margin: 0 10px;
+}
+/* =================================================================== */
+/* MOBILE RESPONSIVE SECTION
+====================================================================== */
+@media (max-width:320px)  {
+    /* smartphones, iPhone, portrait 480x320 phones */ }
+
+
+
+@media (max-width:481px)  {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+
+}
+@media (max-width:765px)  {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .mobileonly{
+        display: block
+    }
+    .mobilehidden{
+        display: none
+    }
+    .hamburg{
+        display: inline-block;
+        padding-right: 20px;
+        font-size:30px;
+        cursor:pointer
+    }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+}
+@media (max-width:961px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+}
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+
+
+}
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+
+
+}

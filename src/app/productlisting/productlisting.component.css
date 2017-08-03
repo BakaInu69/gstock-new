@@ -8,242 +8,59 @@
 /\            /\/           /\/\/\/\/   /\/\/\/          \/\/         /\   \/\   \/\/\/\/
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
-CSS for HomePage
+CSS for Product Listing
 
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
-    1. HOMEPAGE BANNER
-    2. HOMEPAGE CONTENT
-        2.1 HOMEPAGE PRODUCT CONTENT
+    1. PROD NAVBAR
+    2. PRE LISTING CONTENT
+    3. SIDEBAR CONTENT
+    4. PRODUCT
     X. MOBILE RESPONSIVE
 
 
 
+
 /* =================================================================== */
-/* HOMEPAGE BANNER SECTION
+/* PROD NAVBAR SECTION
 ====================================================================== */
-
-.banner-area{
-    width: 100%;
-    background: #ec2962;
-    -webkit-background-size:100%;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center center;
+.inner-head-dropdown{
+    font-weight: 300;
 }
-
-.side-category {
-    background: #fff;
+.dropdown-category{
+    padding: 14px 25px 15px 35px;
 }
-.side-category {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    padding-right: 0%;
-    padding-left: 0
+.dropdown-container-head-inner{
+    padding-top:0;
+    padding-bottom:0
 }
-
-.side-category a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    transition: 0.3s;
-}
-
-.side-category a:hover, .offcanvas a:focus{
-    color: #018d36;
-}
-
-.side-category .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-}
-
-.side-menu{
-    background: #fff;
-    z-index:1
-}
-
-.side-menu>a{
+.bold-dropdown-content{
     color: #000;
-    padding: 20px 0px;
-    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
-.nopadding{
-    padding: 0
-}
-.side-menu-text{
-    display:block;
-    padding: 10px;
-}
-.side-menu-text:hover{
-    background: #fafafa;
-}
-.bcontainer{
-    position: relative;
-}
-img.absolut{
-    left: 50%;
-    margin-left: -66.6666%;
-    position:absolute !important;
+.hot{
+    margin-top: 11px;
 }
 /* =================================================================== */
-/* HOMEPAGE CONTENT SECTION
+/* PRE LISTING SECTION
 ====================================================================== */
-.whitetitle{
-    background: #018d36;
+.category-title{
+    background: #008d36;
     color: #fff;
-    font-weight: 700;
-    vertical-align: middle;
-    padding-top: 5px;
-    padding-bottom: 15px;
     text-align: center;
+    font-size: 16px;
+    padding: 20px 0;
+    margin-top: 12px;
 }
-.whitetitle>h1{
-    color: #ffffff;
-    text-align: center;
-    font-weight: 900;
-    font-size: 64px
-}
-.whitetitle>span{
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px
-}
-.black{
-    color: #000
-}
-.merchant-carousel{
-    padding-top: 48px;
+.category-title>p{
+    margin:0
 }
 
-/*===== HOMEPAGE PRODUCT SECTION =====*/
-.product-area{
-    margin-top: 40px;
-}
-.storey{
-    background: none;
-    margin-bottom: 15px;
-    font-size:18px;
-    color: #000;
-    font-weight: 500;
-    padding: 0;
-    margin-right: 0
-}
-.storey-number{
-    color: #018d36;
-    margin-right: 35px;
-
-}
-.productside-home{
-    margin: 0;
-    padding: 0;
-    margin-bottom: 50px
-}
-.l1{
-    background: #018d36;
-    padding-left: 50px;
-}
-.l2{
-    background: #007b8d;
-    padding-left: 50px;
-}
-.l3{
-    background: #b1b635;
-    padding-left: 50px;
-}
-.l4{
-    background: #bb8725;
-    padding-left: 50px;
-}
-.l5{
-    background: #747474;
-    padding-left: 50px;
-}
-.whatshot>h2{
-    color: #fff;
-    font-weight: 900;
-    margin: 0;
-    padding: 10px 0;
-}
-.whatshot-inner{
-    background: #25aa58;
-    color: #fff;
-    padding: 10px 50px;
-    min-height: 350px;
-}
-
-.l2-1{
-    background: #25a8aa;
-}
-.l3-1{
-    background: #d5d889;
-}
-.l4-1{
-    background: #eebb5c;
-}
-.l5-1{
-    background: #ababab;
-}
-.whatshot>h5{
-    margin: 0;
-    padding-bottom: 3px;
-    color: #fff;
-}
-.whatshotimage{
-    position: absolute;
-    bottom: 320px;
-    bottom: -50px;
-    width: 60%;
-    left: 20%;
-}
-.productside-home{
-    padding: 0 4px
-}
-.product-info{
-    margin-top: 10px;
-    float: left;
-}
-.price{
-    color: #018d36;
-    font-size: 20px;
-}
-.review{
-    float: left;
-    width: 100%;
-    margin-top: 10px;
-}
-.like>a>i{
-    color: #888
-}
-a.fav > .fa + .fa,
-a.fav:hover > .fa {
-    display: none;
-}
-a.fav:hover > .fa + .fa {
-    display: inherit;
-    color: #ff0000;
-}
-.star>a>i{
-    color: #fbc02d;
-}
 .tabs-cont{
-    margin: 0
+    margin: 0;
+    margin-top: 10px;
 }
 ul.tabs{
     margin: 0px;
@@ -271,10 +88,150 @@ ul.tabs li.current{
     padding: 15px;
 }
 
+.tab-content.current {
+    display: inherit;
+}
+/* =================================================================== */
+/* SIDEBAR  SECTION
+====================================================================== */
+.panel-title > a{
+    padding-left: 15px;
+}
+
+.panel-default{
+    border: none;
+}
+.panel-heading{
+    background: #fff;
+    border: none;
+    padding: 15px 15px;
+}
+.list-group{
+    border: none;
+}
+.list-group-item{
+    border: none;
+}
+.panel-group{
+    margin-bottom: 5px;
+}
+ul.list-group > li{
+    padding-left: 50px;
+}
+.panel-title:before{
+    font-family: FontAwesome;
+    content: "\f0da";
+    color: #008d36;
+    float: left
+}
+.filter-title{
+    background: #008d36;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+.filter-title>p{
+    margin:0
+}
+#priceslidercontainer{
+    padding: 15px;
+    padding-top: 0
+}
+.price-slider-amount{
+    position:relative
+}
+.price-slider-amount > .min{
+    float: left;
+    text-align: left
+}
+.price-slider-amount > .max{
+    float: right;
+    text-align: right
+}
+.dropbox-area{
+    padding: 15px 0;;
+    overflow:scroll;
+    height:150px;
+}
+.dropbox-area > li.list-group-item{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 32px;
+}
+.filter-checkbox{
+    margin-right: 15px;
+}
+.dropdown-content{
+    top: 52px;
+}
+/* =================================================================== */
+/* PRODUCT SECTION
+====================================================================== */
+.productside-home{
+    padding: 0 4px
+}
+.product-info{
+    margin-top: 10px;
+    float: left;
+}
+.price{
+    color: #018d36;
+    font-size: 20px;
+}
+.review{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.like>a>i{
+    color: #888
+}
+a.fav > .fa + .fa,
+a.fav:hover > .fa {
+    display: none;
+}
+a.fav:hover > .fa + .fa {
+    display: inherit;
+    color: #ff0000;
+}
+.star>a>i{
+    color: #fbc02d;
+}
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+ul.tabs li.current{
+    background: #018d36;
+    color: #fff;
+}
+li.sort{
+    background: #fff !important;
+    color: #000 !important;
+}
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
 .tab-content.current{
     display: inherit;
 }
-
 /* =================================================================== */
 /* MOBILE RESPONSIVE SECTION
 ====================================================================== */
@@ -299,7 +256,7 @@ ul.tabs li.current{
     .hamburg{
         display: inline-block;
         padding-right: 20px;
-        font-size:30px;
+        vfont-size:30px;
         cursor:pointer
     }
     .sidenav {padding-top: 15px;}

@@ -1,0 +1,30 @@
+<!-- Start Main Content Area -->
+
+<div class="login-background">
+
+    <div class="login-container">
+        <div class="col-xl-6 col-lg-6 col-md-3 col-md-12 nopadding login-left">
+            <img src="assets/images/logo.png" class="login-logo">
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-9 col-md-12 nopadding login-right">
+            <div class="login-form">
+                <p class="login-text">Reset Your Email Here</p>
+                <form>
+                    <input type="email" name="email" class="login-field email-field" placeholder="Enter Your Email" required/>
+                    <div class="g-recaptcha" data-sitekey="6Ld3gyoUAAAAAGQbvMvKaKUw53Is0I7e_GboqNwX"></div>
+                    <input type="submit" class="login-button">
+                    <div class="bottom-login">
+                        <span class="newacc"><a [routerLink]="['/register']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Don't Have an Account?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="green-divider"></div>
+<!-- End Main Content Area -->
+
+
+<!-- Complicated code below
+ ================================================== -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
