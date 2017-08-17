@@ -146,7 +146,6 @@ ul.breadcrumb li a:hover {
     font-size: 28px;
     font-weight: 700;
     line-height: 32px;
-
 }
 .review{
     float: left;
@@ -165,11 +164,128 @@ a.fav:hover > .fa + .fa {
 .wishlist{
     float: right;
 }
+.action-right{
+    float: right;
+    margin-top: 5px;
+}
 .fav-icon{
     font-size: 28px;
 }
 .wishlist-span{
     margin: 0 10px;
+}
+.write-rev{
+    margin-left: 20px;
+    float: left
+}
+.merchant-area{
+    float: left;
+    margin-top: 10px;
+}
+.green{
+    color: #008d36
+}
+.divider{
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #ddd inset;
+    margin: 10px 0 10px 0;
+}
+.top-info{
+    display: block;
+}
+.no-padding{
+    padding: 0
+}
+.promo-area{
+    float:left;
+    width: 80%
+}
+.size-chart{
+    float: right;
+    width: 20%;
+}
+.price-box{
+    float:right;
+    padding: 15px;
+    border: solid 1px #008d36;
+    margin-bottom: 15px;
+}
+.price-box p{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+.red{
+    color: red;
+}
+.sub-price{
+    text-align: right;
+    margin-bottom: 0
+}
+.quantity{
+    float: left;
+    margin-right: 15px;
+}
+.color{
+    float: left;
+}
+.uy-field{
+    padding: 10px;
+    border: solid 1px #008d36;
+    margin-left: 10px
+}
+select{
+    padding: 10px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button{
+    color: #fff;
+}
+.addtocart{
+    float: right
+}
+.product-detail-area > h3{
+    font-weight: 700;
+}
+.table-main-right{
+    width: 80%;
+    padding: 10px 0;
+    vertical-align: top;
+
+}
+.table-main-left{
+    width: 20%;
+    font-weight: 700;
+    padding: 10px 0;
+    vertical-align: top;
+}
+.feature{
+    width: 100%;
+    border-top: #ddd 2px solid;
+    background: #fafafa;
+    font-weight: 300;
+}
+td.first{
+    border: #ddd 1px solid;
+    padding: 3px 20px;
+}
+td.second{
+    border: #ddd 1px solid;
+    padding: 3px 20px;
+}
+.first{
+    width: 40%
+}
+
+.second{
+    width: 60%
+}
+.related{
+    margin:40px 0;
 }
 /* =================================================================== */
 /* MOBILE RESPONSIVE SECTION
@@ -198,13 +314,16 @@ a.fav:hover > .fa + .fa {
         font-size:30px;
         cursor:pointer
     }
+
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 
 }
 @media (max-width:961px)  {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-
+    .action-right{
+        float: left
+    }
 
 }
 @media (max-width:1025px) {

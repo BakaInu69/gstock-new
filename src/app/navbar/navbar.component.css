@@ -49,51 +49,60 @@ nav ul li a:hover {
 }
 
 .shopping-cart {
-    margin: 20px 0;
+
+}
+.shopping-cart-wrapper a:hover + .shopping-cart-dropdown, .shopping-cart-dropdown:hover {
+    opacity: 1;
+    display: block;
+}
+.shopping-cart-dropdown {
+    margin: 0px 0px;
     float: right;
     background: #fafafa;
     width: 320px;
     position: absolute;
     border-radius: 3px;
-    padding: 20px;
+    padding: 20px 20px;
     right: 300px;
     z-index:5;
     border: solid 1px #aaa;
-    display: none;
+    display:none;
+    opacity:0;
 }
-.shopping-cart .shopping-cart-header {
+
+.shopping-cart-dropdown .shopping-cart-header {
     border-bottom: 1px solid #E8E8E8;
     padding-bottom: 15px;
 }
-.shopping-cart .shopping-cart-header .shopping-cart-total {
+.shopping-cart-dropdown .shopping-cart-header .shopping-cart-total {
     float: right;
 }
-.shopping-cart .shopping-cart-items {
+.shopping-cart-dropdown .shopping-cart-items {
     padding-top: 20px;
     padding-left: 10px
 }
-.shopping-cart .shopping-cart-items li {
+.shopping-cart-dropdown .shopping-cart-items li {
     margin-bottom: 18px;
 }
-.shopping-cart .shopping-cart-items img {
+.shopping-cart-dropdown .shopping-cart-items img {
     float: left;
     margin-right: 12px;
 }
-.shopping-cart .shopping-cart-items .item-name {
+.shopping-cart-dropdown .shopping-cart-items .item-name {
     display: block;
     padding-top: 10px;
     font-size: 16px;
 }
-.shopping-cart .shopping-cart-items .item-price {
+.shopping-cart-dropdown .shopping-cart-items .item-price {
     color: #018d36;
     margin-right: 8px;
 }
-.shopping-cart .shopping-cart-items .item-quantity {
+.shopping-cart-dropdown .shopping-cart-items .item-quantity {
     color: #ABB0BE;
 }
 
-.shopping-cart:after {
-    bottom: 100%;
+.shopping-cart-dropdown:after {
+   /* bottom: 100%;
     left: 89%;
     border: solid 1px #aaa;
     content: " ";
@@ -104,7 +113,7 @@ nav ul li a:hover {
     border-bottom-color: white;
     border-width: 8px;
     margin-left: -8px;
-    background: #fafafa
+    background: #fafafa*/
 }
 
 .cart-icon {
@@ -143,3 +152,4 @@ nav ul li a:hover {
 .hidden {
     visibility: hidden;
 }
+
