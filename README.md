@@ -4,7 +4,11 @@
 Gstock under development
 
 ## UPDATE LOG ##
-
+Update Log (0.1.2) - 17/08/2017:
+ - Fixed Cart Dropdown Issue
+ - Product Detail Page update
+ - Minor Bug Fix
+ 
 Update Log (0.1.1):
  - Added Product Listing Page
  - Added Login, Registration, Forget Password
@@ -20,6 +24,6 @@ Next update list:
  - Mega Menu for the header
  - product detail page completion
  
- --Randy
+
 
 
