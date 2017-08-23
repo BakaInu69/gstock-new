@@ -34,3 +34,20 @@
 
 <!-- Complicated code below
  ================================================== -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function() {
+            var checkbox = $("#switch");
+            var hidden = $("#shopname");
+            hidden.hide();
+
+            checkbox.change(function() {
+                if (checkbox.is(':checked')) {
+                    hidden.show()
+                } else {
+                    hidden.hide()
+                }
+            });
+        });
+    });
+</script>

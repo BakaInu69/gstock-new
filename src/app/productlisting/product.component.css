@@ -287,6 +287,70 @@ td.second{
 .related{
     margin:40px 0;
 }
+.review-head{
+    background: #eeeeee;
+    padding: 15px 15px;
+}
+.review-head b{
+    float:left;
+}
+.comment-filter {
+    float: right;
+    margin-right: 25px;
+}
+.comment-icon{
+    color: #7f7f7f;
+}
+.comment-sort {
+    float: right;
+}
+.review-content{
+    padding: 15px 20px;
+    float: left;
+    border-bottom: 1px #666 solid;
+}
+.star{
+    float:left;
+    margin-right: 15px;
+}
+.review-title{
+    font-weight: 700;
+}
+.review-person{
+    color: #aaa;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.review-person-area{
+    width: 100%;
+    margin-top: 5px;
+    float: left
+}
+.verified-span{
+    margin: 0 3px;
+}
+.review-text-area{
+    display: block;
+    width: 100%;
+}
+.review-text{
+    margin-top: 15px;
+}
+.timing{
+    position:absolute;
+    right: 0;
+    top: 10px
+}
+.timing{
+    font-size: 13px;
+    color: #666;
+}
+.sidebar{
+    font-weight: 700;
+}
+.productside-home{
+    margin-bottom: 30px;
+}
 /* =================================================================== */
 /* MOBILE RESPONSIVE SECTION
 ====================================================================== */

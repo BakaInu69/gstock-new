@@ -12,6 +12,7 @@ import { FooterModule } from './footer/footer.module';
 import { ResetModule } from './buyer/reset.module';
 import { CartModule } from './cart/cart.module';
 import { CheckoutModule } from './checkout/checkout.module';
+import * as $ from 'jquery';
 @NgModule({
   declarations: [
     AppComponent

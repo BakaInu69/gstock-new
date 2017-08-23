@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as $ from 'jquery';
+import 'slick-carousel/slick/slick';
 
 @Component({
   selector: 'app-register',
@@ -7,4 +9,19 @@ import { Component } from '@angular/core';
 })
   export class RegisterComponent{
   title = 'Gstock';
+  ngOnInit() {
+    (<any>$)(function() {
+      var checkbox = $("#switch");
+      var hidden = $("#shopname");
+      hidden.hide();
+
+      checkbox.change(function() {
+        if (checkbox.is(':checked')) {
+          hidden.show()
+        } else {
+          hidden.hide()
+        }
+      });
+    });
+  }
 }

@@ -5,6 +5,6 @@ import { CheckoutRoutingModule } from './checkout-routing.module';
 @NgModule({
     imports: [CheckoutRoutingModule],
     declarations: [CheckoutComponent],
-    exports: [CheckoutComponent],
+    exports: [CheckoutComponent]
 })
 export class CheckoutModule { }
