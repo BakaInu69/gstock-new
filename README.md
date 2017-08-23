@@ -4,6 +4,10 @@
 Gstock under development
 
 ## UPDATE LOG ##
+Update Log (0.2.0) - 23/08/2017:
+ - Moved All jquery to each component
+ - Minor Bug Fix on the price slider
+ 
 Update Log (0.1.2) - 17/08/2017:
  - Fixed Cart Dropdown Issue
  - Product Detail Page update
