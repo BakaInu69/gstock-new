@@ -11,7 +11,7 @@ app.get('/*', (req, res) => {
   res.send('Hello World!')
   //   res.sendFile(path.join(__dirname, 'dist/index.html'))
 })
-const port = 3000
+const port = process.env.PORT || 3000
 app.set('port', port)
 const server = http.createServer(app)
 app.listen(port, function () {
