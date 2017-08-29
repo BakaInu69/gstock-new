@@ -2,9 +2,20 @@
 link:
 http://7w.com.sg/demo/gstocknew/v.0.2.1/index.html
 
+api-endpoint:
+https://docs.google.com/spreadsheets/d/192r8jcakrZxLhsIeoJrET-o-PBPcoqlIyyendxx8YbM/edit?usp=sharing
+
 Gstock under development
 
 ## UPDATE LOG ##
+
+Update Log (0.3.0) - 29/08/2017:
+ - Changed the field in the registration form
+ - Using NgForm for Login, Registration
+ - Data is stored in a mock backend
+ - Updated the "Hi {name}" section in the header part of homepage
+ - Minor Bug Fix
+ 
 Update Log (0.2.0) - 23/08/2017:
  - Moved All jquery to each component
  - Minor Bug Fix on the price slider
