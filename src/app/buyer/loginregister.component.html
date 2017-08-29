@@ -9,10 +9,23 @@
         <div class="col-xl-6 col-lg-6 col-md-9 col-md-12 nopadding login-right">
             <div class="login-form">
                 <p class="login-text">Login to your account</p>
-                <form>
-                    <input type="email" name="email" class="login-field email-field" placeholder="Enter Your Email" required/>
-                    <input type="password" name="email" class="login-field password-field" placeholder="Enter Your Password" required/>
-                    <input type="submit" class="login-button">
+                <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                    <!--<input type="email" class="login-field email-field" placeholder="Enter Your Email" [(ngModel)]="model.email" name="email" #email="ngModel" required />
+                    <input type="password" class="login-field password-field" placeholder="Enter Your Password"  [(ngModel)]="model.password" name="password" #password="ngModel" required />
+                    <button [disabled]="loading" class="login-button">submit</button>-->
+
+                    <div [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                        <input type="email" class="login-field email-field" name="email" placeholder="Enter Your Email" [(ngModel)]="model.email" #email="ngModel" required />
+                        <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+                    </div>
+                    <div [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                        <input type="password" class="login-field password-field" name="password" placeholder="Enter Your Password" [(ngModel)]="model.password" #password="ngModel" required />
+                        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                    </div>
+                        <button [disabled]="loading" class="login-button">Login</button>
+                        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+
+
                     <div class="sociallogin">
                         <span class="login-text other-login">or login with: </span>
                         <a href="#"><span class="icon-login"><i class="fa fa-facebook fb" aria-hidden="true"></i></span></a>

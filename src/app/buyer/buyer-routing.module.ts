@@ -15,3 +15,4 @@ import { ResetComponent } from './reset.component';
     exports: [RouterModule]
 })
 export class LoginregisterRoutingModule{ }
+

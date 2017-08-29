@@ -12,10 +12,20 @@ import { FooterModule } from './footer/footer.module';
 import { ResetModule } from './buyer/reset.module';
 import { CartModule } from './cart/cart.module';
 import { CheckoutModule } from './checkout/checkout.module';
-import * as $ from 'jquery';
+import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
+import { AlertComponent } from './_directives/index';
+import { AuthGuard } from './_guards/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,9 +38,23 @@ import * as $ from 'jquery';
     FooterModule,
     ResetModule,
     CartModule,
-    CheckoutModule
+    CheckoutModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService,
+
+    // providers used to create fake backend
+    fakeBackendProvider,
+    MockBackend,
+    BaseRequestOptions
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
