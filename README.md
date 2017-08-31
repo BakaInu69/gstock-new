@@ -5,6 +5,9 @@ http://7w.com.sg/demo/gstocknew/v.0.2.1/index.html
 api-endpoint:
 https://docs.google.com/spreadsheets/d/192r8jcakrZxLhsIeoJrET-o-PBPcoqlIyyendxx8YbM/edit?usp=sharing
 
+api entry url:
+https://test34551111.herokuapp.com/
+
 Gstock under development
 
 ## UPDATE LOG ##
