@@ -11,6 +11,7 @@ import { RegisterModule } from './buyer/register.module';
 import { FooterModule } from './footer/footer.module';
 import { ResetModule } from './buyer/reset.module';
 import { CartModule } from './cart/cart.module';
+import { MerchantModule } from './merchant/merchant.module';
 import { CheckoutModule } from './checkout/checkout.module';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -38,6 +39,7 @@ import { AlertService, AuthenticationService, UserService } from './_services/in
     FooterModule,
     ResetModule,
     CartModule,
+    MerchantModule,
     CheckoutModule,
     BrowserModule,
     FormsModule,

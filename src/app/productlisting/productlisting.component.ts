@@ -12,6 +12,15 @@ import 'assets/js/bootstrap-slider.min.js';
   title = 'Gstock';
   ngOnInit() {
     (<any>$("#ex2")).slider({});
+    (<any>$('.footer-category')).slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next')
+    });
   }
 
 }

@@ -38,7 +38,7 @@ import 'slick-carousel/slick/slick';
 
   ngOnInit() {
     (<any>$)(function() {
-      var checkbox = $("#switch");
+      var checkbox = $("#merchant");
       var hidden = $("#shopname");
       hidden.hide();
 

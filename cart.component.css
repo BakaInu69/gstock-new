@@ -1,0 +1,250 @@
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+/\            /\/\           \/\            /\/          \/\/         /\   \/\/   /\/\/\/
+/\   \/\/\/\/\/\/    \/\/\/\/\/\/\/\/   /\/\/\    /\/\    /\/   /\/\/\/\   \/\   /\/\/\/\
+/\   \/\/\/\/\/\/   /\/\/\/\/\/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\   \    /\/\/\/\/
+/\   \/\      /\/            \/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\       /\/\/\/\/\
+/\   \/\\/\   \/\/\/\/\/\/   /\/\/\/\   \/\/\/    \/\/    \/\   \/\/\/\/   /\   /\/\/\/\/
+/\            /\/           /\/\/\/\/   /\/\/\/          \/\/         /\   \/\   \/\/\/\/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+CSS for Cart
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+    1. CART NAVBAR
+    2. CHECKOUT SIDEBAR
+    X. MOBILE RESPONSIVE
+
+
+/* =================================================================== */
+/* CART SECTION
+====================================================================== */
+.inner-head-dropdown{
+    font-weight: 300;
+}
+.dropdown-category{
+    padding: 14px 25px 15px 35px;
+}
+.dropdown-container-head-inner{
+    padding-top:0;
+    padding-bottom:0
+}
+.bold-dropdown-content{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hot{
+    margin-top: 11px;
+}
+.cart-area{
+    margin: 0px 0 20px 0;
+    width: 75%;
+    padding: 0 40px;
+    float: left
+}
+.cart-row{
+    border-bottom: 1px solid #999;
+}
+.prod{
+ padding: 30px;
+}
+.ship{
+    padding: 10px 30px;
+    border-bottom: 1px solid #999;
+    height: 100px
+}
+.cart-prodname{
+    color: #5ca963;
+}
+.qty{
+    text-align: center
+}
+.prodqt{
+    margin-top: 20px;
+}
+h2.prodqt{
+    font-size: 14px;
+}
+.qtyinput{
+    display: inline-block;
+    width: 40px;
+    text-align-all: center;
+}
+.button-qt{
+    margin: 0 10px;
+}
+.del{
+    font-size: 24px;
+    margin-top: 70px
+}
+.prpc{
+    text-align: right
+}
+.shipmenttitle{
+    margin-top: 0
+}
+.ship-row{
+    margin-left: 16.666666%;
+}
+.grey{
+    color: #ccc !important;
+}
+.checkoutbutton{
+    background: #5ca963;
+    border: 1px solid  #5ca963;
+    color: #fff;
+    padding: 11px 25px;
+    margin: 20px 0;
+}
+
+/* =================================================================== */
+/* SIDEAREA SECTION
+====================================================================== */
+
+
+.side-area{
+    width: 25%;
+    float: left;
+    padding: 20px;
+    background: #ededed;
+}
+.labelside{
+    margin-bottom: 20px
+}
+.termscon{
+    font-size: 12px;
+}
+/* =================================================================== */
+/* MAP SECTION
+====================================================================== */
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+.pac-card {
+    margin: 0;
+    width: 100%;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    background: linear-gradient(#fff,#fff,#fff,#fff, transparent);
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+    text-align: center;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    font-weight: 300;
+    padding: 20px;
+    text-overflow: ellipsis;
+    width: 500px;
+    margin: 30px 0 100px 0;
+}
+.unitno {
+    font-weight: 300;
+    padding: 20px;
+    text-overflow: ellipsis;
+}
+.gmnoprint{
+    display: none !important;
+}
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#title {
+    color: #333;
+    background-color: #fafafa;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 25px 12px;
+    text-align: center
+}
+
+/* =================================================================== */
+/* MOBILE RESPONSIVE SECTION
+====================================================================== */
+@media (max-width:320px)  {
+    /* smartphones, iPhone, portrait 480x320 phones */ }
+
+
+
+@media (max-width:481px)  {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+
+}
+@media (max-width:765px)  {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .mobileonly{
+        display: block
+    }
+    .mobilehidden{
+        display: none
+    }
+    .hamburg{
+        display: inline-block;
+        padding-right: 20px;
+        vfont-size:30px;
+        cursor:pointer
+    }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+}
+@media (max-width:961px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+}
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+
+
+}
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+
+
+}
