@@ -126,6 +126,14 @@ input[type="submit"]{
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.login-button[disabled]{
+    color: #fff;
+    background: #666
+}
+.login-button[disabled]:hover{
+    color: #fff;
+    background: #666
+}
 
 .login-button:hover{
     color: #fafafa;

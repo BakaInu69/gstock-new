@@ -15,6 +15,7 @@ import { MerchantModule } from './merchant/merchant.module';
 import { CheckoutModule } from './checkout/checkout.module';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CustomFormsModule } from 'ng2-validation'
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    CustomFormsModule
   ],
   bootstrap: [AppComponent]
 })
