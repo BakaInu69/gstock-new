@@ -1,0 +1,79 @@
+<!-- Start Main Content Area -->
+
+<div class="login-background">
+
+  <div class="login-container">
+    <div class="col-xl-6 col-lg-6 col-md-3 col-md-12 nopadding login-left">
+      <img src="assets/images/logo.png" class="login-logo">
+    </div>
+    <div class="col-xl-6 col-lg-6 col-md-9 col-md-12 nopadding login-right">
+      <div class="login-form">
+        <p class="login-text">Login to your account</p>
+        <form (ngSubmit)="login()" [formGroup]='loginForm' novalidate>
+          <!-- <div [ngClass]="{ 'has-error': !formControl.email.valid }"> -->
+          <input type="email" class="login-field email-field" placeholder="Enter Your Email" formControlName='email' required />
+          <!-- <div *ngIf="!formControl.emial.valid" class="help-block">Email is required</div> -->
+          <!-- </div> -->
+          <!-- <div [ngClass]="{ 'has-error': !formControl.password.valid }"> -->
+          <input type="password" class="login-field password-field" name="password" placeholder="Enter Your Password" formControlName='password'
+          />
+          <!-- <div *ngIf="!formControl.password.valid" class="help-block">Password is required</div> -->
+          <!-- </div> -->
+          <button type='submit' [disabled]="!loginForm.valid" class="login-button">Login</button>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+          />
+        </form>
+        <div class="sociallogin">
+          <span class="login-text other-login">or login with: </span>
+          <a href="#">
+            <span class="icon-login">
+              <i class="fa fa-facebook fb" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span class="icon-login">
+              <i class="fa fa-google-plus google" aria-hidden="true"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span class="icon-login">
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+        <div class="bottom-login">
+          <span class="newacc">
+            <a [routerLink]="['register']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Don't Have an Account?</a>
+          </span>
+          <span>
+            <a [routerLink]="['/reset-password']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Forget Password?</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="green-divider"></div>
+<!-- End Main Content Area -->
+
+
+<!-- Complicated code below
+ ================================================== -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(function () {
+      var checkbox = $("#switch");
+      var hidden = $("#shopname");
+      hidden.hide();
+
+      checkbox.change(function () {
+        if (checkbox.is(':checked')) {
+          hidden.show()
+        } else {
+          hidden.hide()
+        }
+      });
+    });
+  });
+
+</script>

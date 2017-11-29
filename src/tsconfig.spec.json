@@ -3,13 +3,22 @@
   "compilerOptions": {
     "outDir": "../out-tsc/spec",
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noEmitHelpers": true,
+    "strictNullChecks": false,
     "baseUrl": "",
     "types": [
       "jasmine",
       "node"
     ]
   },
+  "lib": [
+    "dom",
+    "es6"
+  ],
   "files": [
     "test.ts"
   ],

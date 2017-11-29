@@ -1,0 +1,263 @@
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+/\            /\/\           \/\            /\/          \/\/         /\   \/\/   /\/\/\/
+/\   \/\/\/\/\/\/    \/\/\/\/\/\/\/\/   /\/\/\    /\/\    /\/   /\/\/\/\   \/\   /\/\/\/\
+/\   \/\/\/\/\/\/   /\/\/\/\/\/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\   \    /\/\/\/\/
+/\   \/\      /\/            \/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\       /\/\/\/\/\
+/\   \/\\/\   \/\/\/\/\/\/   /\/\/\/\   \/\/\/    \/\/    \/\   \/\/\/\/   /\   /\/\/\/\/
+/\            /\/           /\/\/\/\/   /\/\/\/          \/\/         /\   \/\   \/\/\/\/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+CSS for Cart
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+    1. PROD NAVBAR NAVBAR
+    2. MERCHANT
+    X. MOBILE RESPONSIVE
+
+
+/* =================================================================== */
+/* PROD NAVBAR SECTION
+====================================================================== */
+.inner-head-dropdown{
+    font-weight: 300;
+}
+.dropdown-category{
+    padding: 14px 25px 15px 35px;
+}
+.dropdown-container-head-inner{
+    padding-top:0;
+    padding-bottom:0
+}
+.bold-dropdown-content{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hot{
+    margin-top: 11px;
+}
+
+/* =================================================================== */
+/* MERCHANT SECTION
+====================================================================== */
+.green{
+    color: #008d36;
+}
+.merchant-page-header{
+    margin-top: 20px;
+    height: 170px;
+}
+.mhead-left{
+    padding: 10px;
+    background: #008d36;
+}
+.mlogo{
+    width: 150px;
+    max-width: 40%;
+    height: 150px;
+    -webkit-border-radius:150px;
+    -moz-border-radius:150px;
+    border-radius:150px;
+    float: left
+}
+.mtitle{
+    float: right;
+    text-align: left;
+    width: 60%;
+}
+.mname{
+    color: #fff;
+    font-weight: 700;
+}
+.mtitlebox{
+    border: 1px #fff solid;
+    padding: 10px;
+    color: #fff;
+}
+.mdep{
+    color: #fff000;
+}
+table.mtitletable>tr>td {
+    padding: 0 15px;
+}
+.micon{
+    color: #fff;
+}
+td{
+    padding: 2px 5px;
+}
+.mbanner{
+    min-height: 174px;
+    width: 100%;
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+}
+.mhead-right{
+    padding: 0;
+    overflow: hidden;
+    height: 174px;
+}
+.merchant-main-area{
+    margin: 20px 0;
+}
+
+.productside-home{
+    padding: 0 4px
+}
+.product-info{
+    margin-top: 10px;
+    float: left;
+}
+.price{
+    color: #018d36;
+    font-size: 20px;
+}
+.review{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.like>a>i{
+    color: #888
+}
+a.fav > .fa + .fa,
+a.fav:hover > .fa {
+    display: none;
+}
+a.fav:hover > .fa + .fa {
+    display: inherit;
+    color: #ff0000;
+}
+.star>a>i{
+    color: #fbc02d;
+}
+.tabs-cont{
+    margin: 0
+}
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+ul.tabs li.current{
+    background: #018d36;
+    color: #fff;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float:left
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.left {
+    float: left
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.msubbh{
+    font-size: 16px;
+}
+.msubbhdiv{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.downloo{
+    padding-left: 5px;
+}
+.merchant-prd{
+    margin: 60px 0 20px 0;
+}
+.inner-ddwn{
+    top: 0
+}
+
+.msubbanner{
+    margin: 20px 0;
+}
+.mer-side{
+    margin-bottom: 50px;
+}
+.new-arrival{
+    margin-bottom: 50px;
+}
+/* =================================================================== */
+/* MOBILE RESPONSIVE SECTION
+====================================================================== */
+@media (max-width:320px)  {
+    /* smartphones, iPhone, portrait 480x320 phones */ }
+
+
+
+@media (max-width:481px)  {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+
+}
+@media (max-width:765px)  {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .mobileonly{
+        display: block
+    }
+    .mobilehidden{
+        display: none
+    }
+    .hamburg{
+        display: inline-block;
+        padding-right: 20px;
+        vfont-size:30px;
+        cursor:pointer
+    }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+}
+@media (max-width:961px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+}
+@media (max-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+
+
+}
+@media (max-width:1281px) {
+    /* hi-res laptops and desktops */
+
+
+}

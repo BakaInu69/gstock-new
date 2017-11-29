@@ -1,0 +1,142 @@
+<!-- Start Cover banner Area -->
+<div class="black-opaque">
+  <div class="cover-banner-image">
+    <div class="image"><img src="assets/images/dashboard-background.jpg"></div>
+    <div class="opaque"><img src="assets/images/black.png" width="100%"></div>
+  </div>
+  <div class="container cover-content">
+    <div class=" col-sm-12 nopadding">
+      <div class="profile-pic">
+      </div>
+      <div class="profile-title">
+        <h1>John Doe</h1>
+        <p>Joined since: March 1998  |  120 points</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- End Cover banner Area -->
+
+<!-- Start Content Area -->
+
+<div class="container content-area">
+  <!-- Top Navigation -->
+  <div class="component">
+    <!-- Start Nav Structure -->
+    <button class="cn-button" id="cn-button"><img src="assets/images/hamburger.png"></button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/account.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/wishlist.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/credit.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/wallet.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/settings.png"></span></a></li>
+      </ul>
+    </div>
+    <!-- End of Nav Structure -->
+  </div>
+  <div class=" col-sm-3 nopadding">
+    <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-9 col-menu-1">
+        <p>Order List</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/settings']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-3 col-menu-2">
+        <p></p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/wishlist']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Wishlist</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/credit-wallet']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Credit Wallet</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/rewards']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Reward Point</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/account']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Account Information</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/track']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Track My Order</p>
+      </div>
+    </a>
+    <a [routerLink]="['/home']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-offset-4 col-sm-8 col-menu-4">
+        <p>Log Out</p>
+      </div>
+    </a>
+  </div>
+  <div class=" col-sm-9 nopadding">
+    <div class="body-content">
+      <h2>Credit Wallet</h2>
+      <p>Check How much Credit you have accumulated</p>
+      <div class="col-sm-4 infographic-container">
+        <div class="infographic">
+          <h3>Total Number of Credit</h3>
+          <p>S$ 5,887</p>
+        </div>
+      </div>
+      <div class="col-sm-4 infographic-container">
+        <div class="infographic">
+          <h3>Total Credit Earned in past 30 days</h3>
+          <p>S$ 2,720</p>
+        </div>
+      </div>
+      <div class="col-sm-4 infographic-container">
+        <div class="infographic">
+          <h3>Credit Spent in past 30 days</h3>
+          <p>-S$235</p>
+        </div>
+      </div>
+      <div class="order-table">
+        <section>
+          <!--for demo wrap-->
+          <div class="tbl-header" style="padding-right: 6px;">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <thead>
+              <tr>
+                <th>Date</th>
+                <th>Transaction Type</th>
+                <th>Transaction Details</th>
+                <th>Change</th>
+                <th>Balance</th>
+              </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+              <tr><td>20/11/2017</td><td>Returned item</td><td><a href="#">Returned item for order #100000218</a></td><td>$77.00</td><td>$77.00</td></tr>
+              <tr><td>25/11/2017</td><td>Check Out by Credit</td><td><a href="#">Returned item for order #100000219</a></td><td>-$30.00</td><td>$47.00</td></tr>
+              <tr><td>25/11/2017</td><td>Check Out by Credit</td><td><a href="#">Returned item for order #100000219</a></td><td>-$30.00</td><td>$47.00</td></tr>
+              <tr><td>25/11/2017</td><td>Check Out by Credit</td><td><a href="#">Returned item for order #100000219</a></td><td>-$30.00</td><td>$47.00</td></tr>
+              <tr><td>25/11/2017</td><td>Check Out by Credit</td><td><a href="#">Returned item for order #100000219</a></td><td>-$30.00</td><td>$47.00</td></tr>
+              <tr><td>25/11/2017</td><td>Check Out by Credit</td><td><a href="#">Returned item for order #100000219</a></td><td>-$30.00</td><td>$47.00</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="green-divider"></div>
+<!-- End Content Area -->
+
+
+

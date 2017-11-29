@@ -1,18 +1,35 @@
-import { Component } from '@angular/core';
-import * as $ from 'jquery';
-import 'assets/js/bootstrap.min.js';
-import 'assets/js/bootstrap-slider.min.js';
-
+import { ProductListingService } from './productlisting.service';
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-productlisting',
   templateUrl: './productlisting.component.html',
-  styleUrls: ['./productlisting.component.css']
+  styleUrls: ['./productlisting.component.css'],
+  providers: [ProductListingService]
 })
-  export class ProductlistingComponent{
-  title = 'Gstock';
+export class ProductlistingComponent implements OnInit {
+  private products = [];
+  private mainimage =[];
+  constructor(
+    private _productListingService: ProductListingService,
+    private aR: ActivatedRoute
+  ) {
+
+  }
   ngOnInit() {
-    (<any>$("#ex2")).slider({});
-    (<any>$('.footer-category')).slick({
+    this.aR.params.subscribe(
+      params => {
+        this._productListingService.getProduct(params.name).subscribe((data) => {
+          console.log(data)
+
+          this.products = data['docs'];
+          console.log("this is products",this.products)
+        })
+      }
+
+    )
+    $('#ex2').slider({})
+    $('.footer-category').slick({
       slidesToShow: 5,
       slidesToScroll: 1,
       autoplay: true,

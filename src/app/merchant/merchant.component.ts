@@ -1,25 +1,24 @@
-import { Component } from '@angular/core';
-import * as $ from 'jquery';
-import 'slick-carousel/slick/slick';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-merchant',
   templateUrl: './merchant.component.html',
   styleUrls: ['./merchant.component.css']
 })
-export class MerchantComponent{
+export class MerchantComponent implements OnInit {
   title = 'Gstock';
   ngOnInit() {
-    (<any>$('.product-slider-home')).slick({
+    $('.product-slider-home').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 5000,
       dots: false,
-      prevArrow: false,
-      nextArrow: false
+      prevArrow: '',
+      nextArrow: ''
     });
-    (<any>$('.footer-category')).slick({
+    $('.footer-category').slick({
       slidesToShow: 5,
       slidesToScroll: 1,
       autoplay: true,
@@ -28,14 +27,14 @@ export class MerchantComponent{
       prevArrow: $('.prev'),
       nextArrow: $('.next')
     });
-    (<any>$('ul.tabs li')).click(function(){
-      var tab_id = $(this).attr('data-tab');
+    $('ul.tabs li').click(function () {
+      const tab_id = $(this).attr('data-tab');
 
       $('ul.tabs li').removeClass('current');
       $('.tab-content').removeClass('current');
 
       $(this).addClass('current');
-      $("#"+tab_id).addClass('current');
+      $('#' + tab_id).addClass('current');
     })
   }
 }

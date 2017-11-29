@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://gstock.ap.ngrok.io/buyer.gstock',
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhMTNlZGFiODUxYTdlMGY0NDdjODQ4NSIsImlhdCI6MTUxMTI1NTQ4Mn0.xzrIdVRDwgCl7tCCjFSVdsQM3mv6Q4ByFthfXYqxpu4'
 };

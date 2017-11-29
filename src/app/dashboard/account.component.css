@@ -1,0 +1,336 @@
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+/\            /\/\           \/\            /\/          \/\/         /\   \/\/   /\/\/\/
+/\   \/\/\/\/\/\/    \/\/\/\/\/\/\/\/   /\/\/\    /\/\    /\/   /\/\/\/\   \/\   /\/\/\/\
+/\   \/\/\/\/\/\/   /\/\/\/\/\/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\   \    /\/\/\/\/
+/\   \/\      /\/            \/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\       /\/\/\/\/\
+/\   \/\\/\   \/\/\/\/\/\/   /\/\/\/\   \/\/\/    \/\/    \/\   \/\/\/\/   /\   /\/\/\/\/
+/\            /\/           /\/\/\/\/   /\/\/\/          \/\/         /\   \/\   \/\/\/\/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+CSS for Cart
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+    1. COVER IMAVE SECTION
+    2. CHECKOUT SIDEBAR
+    X. MOBILE RESPONSIVE
+
+
+/* =================================================================== */
+
+
+/* COVER IMAGE SECTION
+====================================================================== */
+.cover-banner-image{
+  min-height: 400px;
+  background-position: bottom left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 25%;
+  background-repeat:no-repeat;
+  position: absolute;
+  overflow: hidden;
+  top: -215%;
+  left: -50%;
+  width: 300%;
+  height: 300%;
+  opacity: 1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 6px rgba( 0, 0, 0, 0 );
+  -moz-box-shadow: inset 0 1px 6px rgba( 0, 0, 0, 0 );
+  border: 9px solid #fff;
+  border-radius: 200%
+  }
+.cover-banner-image > .image{
+  position: absolute;
+  width: 200%;
+  bottom: 0;
+  left: 16%;
+  height: 400px;
+  top: initial;
+}
+.cover-banner-image > .image > img{
+  min-height: 100%;
+  min-width: 17%
+}
+.black-opaque {
+  background: #fff;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.opaque{
+  background: rgba(0,0,0,0.75);
+  width: 100%;
+  height: 400px;
+  position:absolute;
+}
+.black-opaque:aftera {
+  content: "";
+  width: 500%;
+  height: 0;
+  padding-top: 200%;
+  border-radius: 400%;
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 400%;
+  -moz-border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 6px rgba( 0, 0, 0, 0 );
+  -moz-box-shadow: inset 0 1px 6px rgba( 0, 0, 0, 0 );
+  border: 9px solid #fff;
+}
+.cover-content{
+  color: #fff;
+  padding-top: 30px;
+}
+.profile-pic{
+  width: 100px;
+  height: 100px;
+  background-image: url(/assets/images/man.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 50px;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+.profile-pic>img{
+  object-fit: cover;
+
+}
+.profile-title{
+  float: left;
+  margin-left: 30px;
+  color: #fff
+}
+.profile-title > h1{
+  margin: 10px 0 0 0;
+  color: #fff;
+  font-size: 32px;
+}
+/* =================================================================== */
+
+
+/* SIDEAREA SECTION
+====================================================================== */
+.content-area{
+  margin-top: -60px;
+}
+.col-menu-1{
+  background: #5caa63;
+  transition:  0.5s ease;
+  color: #fff;
+  padding: 15px 25px;
+  text-align: left;
+  width: 78%;
+  margin: 0 1%
+}
+.col-menu-1:hover{
+  background:#24782c;
+  transition: 0.5s ease;
+}
+.col-menu-1 > p{
+  margin: 0
+}
+
+.col-menu-2{
+  background: url('/assets/images/gear.png') #f2a51f;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+  color: #fff;
+  padding: 15px;
+  height: 50px;
+  width: 18%;
+  margin: 0 1%;
+  transition:  0.5s ease;
+
+}
+
+.col-menu-2:hover{
+  background: url('/assets/images/gear.png') #b77b13;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+  transition:  0.5s ease;
+}
+.col-menu-3{
+  background: #dddddd;
+  transition:  0.5s ease;
+  color: #000;
+  padding: 15px 25px;
+  text-align: left;
+  width: 98%;
+  margin: 0 1%;
+  margin-top: 5px;
+}
+.col-menu-3:hover{
+  background:#666;
+  transition: 0.5s ease;
+  color: #fff;
+}
+.col-menu-3 > p{
+  margin: 0
+}
+.col-menu-4{
+  background: #ec5050;
+  transition:  0.5s ease;
+  color: #fff;
+  padding: 15px 25px;
+  text-align: center;
+  width: 65.66666666666666%;
+  margin-right: 1%;
+  margin-top: 5px;
+}
+.col-menu-4:hover{
+  background:#ab2a2a;
+  transition: 0.5s ease;
+}
+.col-menu-4 > p{
+  margin: 0
+}
+.body-content{
+  background: #eeeeee;
+  padding: 25px 25px;
+  min-height: 1000px;
+}
+.body-content > h2{
+  border-bottom:solid #000 1px;
+}
+
+
+/* =================================================================== */
+
+
+/* TABLE ORDER
+====================================================================== */
+
+/* Style the tab */
+div.tab {
+  overflow: hidden;
+  padding-left: 15%;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tablinks{
+  width: 30%;
+  margin: 0 5%;
+}
+/* Change background color of buttons on hover */
+div.tab button:hover {
+  color: #5caa63;
+  text-decoration: underline;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+  color: #5caa63;
+  text-decoration: underline;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.account-field{
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.input-area{
+  margin-bottom: 20px;
+}
+.login-button{
+  width: 40%;
+  margin-left: 30%;
+  color: #fff
+}
+/* =================================================================== */
+
+
+/* IMAGE UPLOAD
+====================================================================== */
+
+.file-preview-thumbnails{
+  border: 1px solid #666 !important;
+  border-radius: 5px  !important;
+}
+
+.kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+.kv-avatar {
+  display: inline-block;
+}
+.kv-avatar .file-input {
+  display: table-cell;
+  width: 213px;
+}
+.kv-reqd {
+  color: red;
+  font-family: monospace;
+  font-weight: normal;
+}
+
+.red{
+  background: darkred !important;
+}
+
+.clickable > img{
+  padding: 120px 0 0 !important;
+}
+.current-pic{
+  content: '';
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: noen;
+}
+.kv-avatar{
+  width:100%;
+}
+.file-preview-image{
+  width: 100%;
+  overflow: hidden !important;
+}
+.file-input{
+  background: #eee !important
+}
+

@@ -1,0 +1,176 @@
+<!-- Start Cover banner Area -->
+<div class="black-opaque">
+  <div class="cover-banner-image">
+    <div class="image"><img src="assets/images/dashboard-background.jpg"></div>
+    <div class="opaque"><img src="assets/images/black.png" width="100%"></div>
+  </div>
+  <div class="container cover-content">
+    <div class=" col-sm-12 nopadding">
+      <div class="profile-pic">
+        <img [src]="picture_url">
+      </div>
+      <div class="profile-title">
+        <h1>John Doe</h1>
+        <p>Joined since: March 1998  |  120 points</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- End Cover banner Area -->
+
+<!-- Start Content Area -->
+
+<div class="container content-area">
+  <!-- Top Navigation -->
+  <div class="component">
+    <!-- Start Nav Structure -->
+    <button class="cn-button" id="cn-button"><img src="assets/images/hamburger.png"></button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/account.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/wishlist.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/credit.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/wallet.png"></span></a></li>
+        <li><a href="#"><span><img class="cn-icon" src="assets/images/settings.png"></span></a></li>
+      </ul>
+    </div>
+    <!-- End of Nav Structure -->
+  </div>
+  <div class=" col-sm-3 nopadding">
+    <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-9 col-menu-1">
+        <p>Order List</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/settings']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-3 col-menu-2">
+        <p></p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/wishlist']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Wishlist</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/credit-wallet']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Credit Wallet</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/rewards']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Reward Point</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/account']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Account Information</p>
+      </div>
+    </a>
+    <a [routerLink]="['/dashboard/track']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-12 col-menu-3">
+        <p>Track My Order</p>
+      </div>
+    </a>
+    <a [routerLink]="['/home']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+      <div class="col-sm-offset-4 col-sm-8 col-menu-4">
+        <p>Log Out</p>
+      </div>
+    </a>
+  </div>
+  <div class=" col-sm-9 nopadding">
+    <div class="body-content">
+      <h2>Account Information</h2>
+      <p>Update your details here</p>
+      <div class="order-table">
+
+
+        <form (ngSubmit)="updateBuyer($event)" [formGroup]="buyerForm" novalidate>
+          <div class="tab">
+            <button class="tablinks" onclick="tabbed(event, 'account-info')" id="defaultOpen">Account Information</button>
+            <button class="tablinks" onclick="tabbed(event, 'address')">Address Information</button>
+          </div>
+
+          <div id="account-info" class="tabcontent">
+              <div class="col-sm-3">
+                <div class="kv-avatar">
+                  <img class="current-pic" [src]="picture_url" />
+                  <div class="file-loading">
+                    <input id="profile_pic_url" name="profile_pic_url" type="file" (change)='uploadImage(input)' #input >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-9">
+                <div class="col-md-4 input-area">
+                  <label for="prefix">Prefix</label>
+                  <input id="prefix" type="text" class="account-field" placeholder="enter Your Prefix"  formControlName='prefix' />
+                </div>
+                <div class="col-md-offset-4 col-md-4 input-area">
+                  <label for="suffix">Suffix</label>
+                  <input id="suffix" type="text" class="account-field" placeholder="enter Your Suffix"  formControlName='suffix' />
+                </div>
+                <div class="col-md-12 input-area">
+                  <label for="first_name">First Name</label>
+                  <input id="first_name" type="text" class="account-field" placeholder="Re-enter Your Name"  formControlName='first_name' />
+                </div>
+                <div class="col-md-12 input-area">
+                  <label for="middle_name">Middle Name</label>
+                  <input id="middle_name" type="text" class="account-field" placeholder="Middle Name"  formControlName='middle_name' />
+                </div>
+                <div class="col-md-12 input-area">
+                  <label for="last_name">Last Name</label>
+                  <input id="last_name" type="text" class="account-field" placeholder="Re-enter Your Name"  formControlName='last_name' />
+                </div>
+                <div class="col-md-12 input-area">
+                  <label for="email_for_contact">Email</label>
+                  <input id="email_for_contact" type="email" class="account-field" placeholder="Re-enter Your Email"  formControlName='email_for_contact' />
+                </div>
+                <div class="col-md-12 input-area">
+                  <label for="mobile_no">Phone</label>
+                  <input id="mobile_no" type="text" class="account-field" placeholder="Re-enter Your Phone"  formControlName='mobile_no' />
+                </div>
+                <div class="col-md-12 input-area">
+                  <label for="DOB">Date of Birth</label>
+                  <input id="DOB" type="date" class="account-field" placeholder="Re-enter Your Date of Birth" formControlName='DOB' />
+                </div>
+              </div>
+          </div>
+
+          <div id="address" class="tabcontent">
+            <div class="col-md-12 input-area">
+              <label for="addressline1">Address Line 1</label>
+              <input id="addressline1" type="text" class="account-field" placeholder="Re-enter Your Address"  formControlName='addressline1' />
+            </div>
+            <div class="col-md-12 input-area">
+              <label for="addressline2">Address Line 2</label>
+              <input id="addressline2" type="text" class="account-field" placeholder="Re-enter Your Address"  formControlName='addressline2' />
+            </div>
+            <div class="col-md-12 input-area">
+              <label for="addressline3">Address Line 3</label>
+              <input id="addressline3" type="text" class="account-field" placeholder="Re-enter Your Address"  formControlName='addressline3' />
+            </div>
+            <div class="col-md-12 input-area">
+              <label for="zip">Postal Code (Zip)</label>
+              <input id="zip" type="text" class="account-field" placeholder="Re-enter Your Zip code"  formControlName='zip' />
+            </div>
+            <div class="col-md-12 input-area">
+              <label for="country">Country</label>
+              <select id="country" class="account-field crs-country" data-region-id="state_province" data-default-value="Singapore" formControlName='country'></select>
+            </div>
+            <div class="col-md-12 input-area">
+              <label for="state_province">State</label>
+              <select id="state_province" class="account-field" data-default-value="North Singapore" formControlName='state_province'> </select>
+            </div>
+          </div>
+          <button  type="submit" class="login-button">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="green-divider"></div>
+<!-- End Content Area -->
+
+
+

@@ -1,0 +1,667 @@
+<!-- Start Product page header Area -->
+<nav class="navbar">
+  <div class="container">
+    <div class="col-lg-3 col-md-12 nopadding">
+      <div class="navbar-header w100">
+        <div class="navbar-all inner-head-dropdown dropdown-container-head-inner">
+          <div class="dropdown-search dropdown-category w100">
+            <span class="bold-dropdown-content">All Categories</span>
+            <div class="dropdown-content">
+              <div class="dropdown-option">
+                <span class="category-icon">w</span>
+                <a href="#">Women's Fashion</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">m</span>
+                <a href="#">Men's Fashion</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">b</span>
+                <a href="#">Baby & Kids</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">s</span>
+                <a href="#">Shoes, Bags & Accessories</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">c</span>
+                <a href="#">Beauty & Health</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">h</span>
+                <a href="#">Home & kitchen</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">p</span>
+                <a href="#">Sports & Outdoor</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">o</span>
+                <a href="#">Office & Stationery</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">f</span>
+                <a href="#">Food & diet</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">g</span>
+                <a href="#">Electronics/Motor</a>
+              </div>
+              <div class="dropdown-option">
+                <span class="category-icon">w</span>
+                <a href="#">Mobiles & Tablets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">BEST SELLERS</a>
+        </li>
+        <li>
+          <a href="#">SUPER DEAL</a>
+        </li>
+        <li>
+          <a href="#">ON SALE!</a>
+        </li>
+        <li>
+          <a href="#">EVENT COUPON</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- End of Product page header Area -->
+
+<!-- Start of Product Area -->
+<div class="container">
+  <ul class="breadcrumb">
+    <li>
+      <a href="#">{{category[0]}}</a>
+    </li>
+    <li>
+      <a href="#">{{category[1]}}</a>
+    </li>
+    <li>{{category[2]}}</li>
+  </ul>
+</div>
+<div class="container">
+  <div class="col-sm-6">
+    <ngx-slick class="block-text main-slider" #slickModal="slick-modal" [config]="slideConfigmainslider" (afterChange)="afterChange($event)" *ngIf="carousel.length!==0">
+      <div ngxSlickItem *ngFor="let slide of carousel" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+      </div>
+    </ngx-slick>
+    <ngx-slick class="block-text vert-slider" #slickModal="slick-modal" [config]="slideConfigvertslider" (afterChange)="afterChange($event)" *ngIf="carousel.length!==0">
+      <div ngxSlickItem *ngFor="let slide of carousel" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+      </div>
+    </ngx-slick>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="col-sm-12 no-padding">
+      <p class="product-title">{{productDetail?.brief.name}}</p>
+      <div class="review star">
+        <a href="#">
+          <i class="fa fa-star"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-star"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-star"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-star-o"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-star-o"></i>
+        </a>
+      </div>
+      <span class="write-rev">
+        <a href="#">(9) Write a review</a>
+      </span>
+      <div class="action-right">
+        <div class="wishlist">
+          <span>
+            <i class="fa fa-facebook-official fav-icon"></i>
+          </span>
+          <span class="wishlist-span">Share</span>
+        </div>
+        <div class="wishlist">
+          <span>
+            <i class="fa fa-heart fav-icon"></i>
+          </span>
+          <span class="wishlist-span">Add to Wishlist</span>
+        </div>
+      </div>
+      <div class="merchant-area">
+        <span>Merchant:
+          <a href="#" class="green">OEM</a> | See more product from
+          <a href="#" class="green">OEM</a>
+        </span>
+      </div>
+    </div>
+    <div class="col-sm-12 no-padding">
+      <div class="divider"></div>
+    </div>
+    <div class="col-sm-12 no-padding">
+      <div class="promo-area">
+        <p>
+          <span>
+            <i class="fa fa-scissors green"></i>
+          </span>
+          <span class="wishlist-span green">Promotion</span>
+        </p>
+        <p>Free Delivery when you spend above $20 on Seller Collection.</p>
+      </div>
+      <div class="size-chart">
+        <a data-toggle="modal" data-target="#size">
+          <span class="green">
+            <i class="fa fa-table green"></i> Size Chart</span>
+        </a>
+      </div>
+      <div id="size" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Size Guide</h4>
+            </div>
+            <div class="modal-body">
+              <img src="http://165.193.103.96/App_CustomThemes/Dansco%202014%20Theme/images/Dansco-sizechart.png" width="100%">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 no-padding">
+      <div class="divider"></div>
+    </div>
+    <div class="col-sm-12 no-padding">
+      <!--<div *ngFor='let variant of productDetail?.variants;let i = index' class='variant-box' (click)="variantSelected(variant,i);"
+        [ngClass]="selected===i ? 'variant-box-selected':'variant-box'">
+        <p>{{variant.option_value}}</p>
+
+      </div>-->
+      <select  name="variants">
+        <option *ngFor='let variant of productDetail?.variants;let i = index' value="ariant.option_value">{{variant.option_value}}</option>
+      </select>
+
+      <div class=" price-box ">
+        <p [ngClass]="{'hidden': productDetail?.brief.discount_price >= '0', 'na': productDetail?.brief.discount_price === ''}">{{productDetail?.brief.price | currency:'SGD':true:'1.2-2'}}</p>
+        <p>{{productDetail?.brief.discount_price | currency:'SGD':true:'1.2-2'}}</p>
+
+      </div>
+
+    </div>
+    <div class="col-sm-12 no-padding" [ngClass]="{'hidden': productDetail?.brief.discount_price === '', 'col-sm-12 no-padding': productDetail?.brief.discount_price >= '0'}">
+      <p class="red sub-price" >Before SGD {{productDetail?.brief.price | currency:'SGD':true:'1.2-2'}}</p>
+      <p class="green sub-price ">You save {{100-(productDetail?.brief.discount_price/productDetail?.brief.price*100) | number:'1.2-2'}}%</p>
+    </div>
+    <div class="col-sm-12 no-padding ">
+      <div class="divider "></div>
+    </div>
+    <div class="col-sm-12 no-padding ">
+      <!-- <form>
+        <div class="quantity ">
+          <span>Qty: *</span>
+          <input type="number " name="quantity " class="uy-field " min="1 " max="10 " placeholder="1 ">
+        </div>
+        <div class="color ">
+          <span>Color: *</span>
+          <select type="text " name="color " class="uy-field " min="1 " max="10 " placeholder="pink ">
+            <option value="pink ">Pink</option>
+            <option value="blue ">Blue</option>
+            <option value="green ">Green</option>
+            <option value="red ">Red</option>
+            <option value="white ">White</option>
+          </select>
+        </div> -->
+      <button class="addtocart" (click)='addToCart()'>Add to Cart</button>
+      <!-- </form> -->
+    </div>
+  </div>
+  <div class="col-sm-12 no-padding ">
+    <div class="divider "></div>
+  </div>
+  <div class="col-sm-9 no-padding product-detail-area ">
+    <h3>Specifications of {{productDetail?.brief.name}}</h3>
+    <table>
+      <tr>
+        <td class="table-main-left ">What's in the box:</td>
+        <td class="table-main-right ">1x item</td>
+      </tr>
+      <tr>
+        <td class="table-main-left ">Product Description:</td>
+        <td class="table-main-right">
+          {{productDetail?.detail.long_description}}
+        </td>
+      </tr>
+    </table>
+    <h3>
+      <span>General Feature:</span>
+      <table class="feat  ure ">
+        <tr>
+          <td class="first ">
+            SKU
+          </td>
+          <td class="second ">
+            OE702FAA9WZPRTAJSG&273S
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Clothing Material
+          </td>
+          <td class="second ">
+            Cotton
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Collar Type
+          </td>
+          <td class="second ">
+            Not Specified
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Pattern
+          </td>
+          <td class="second ">
+            Not Specified
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Listed Year Season
+          </td>
+          <td class="second ">
+            Summer
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Model
+          </td>
+          <td class="second ">
+            Not Specified
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Number of Pieces
+          </td>
+          <td class="second ">
+            1 Piece
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Sleeves
+          </td>
+          <td class="second ">
+            Short Sleeve
+          </td>
+        </tr>
+        <tr>
+          <td class="first ">
+            Warranty
+          </td>
+          <td class="second ">
+            No Warranty
+          </td>
+        </tr>
+      </table>
+    </h3>
+    <h3>
+      <span></span>
+    </h3>
+    <div class="col-sm-12 no-padding ">
+      <div class="divider "></div>
+    </div>
+    <div class="col-sm-12 no-padding ">
+      <b>People Also Viewed These Products</b>
+    </div>
+    <div class="col-sm-12 no-padding related ">
+      <div class="col-md-3 productside-home ">
+        <img src="assets/images/l1p2.jpg " width="100% " />
+        <div class="product-info ">
+          <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+          <div class="pull-left price ">$19.00</div>
+          <div class="pull-right price ">
+            <a href="# ">
+              <i class="fa fa-truck "></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 productside-home ">
+        <img src="assets/images/l1p2.jpg " width="100% " />
+        <div class="product-info ">
+          <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+          <div class="pull-left price ">$19.00</div>
+          <div class="pull-right price ">
+            <a href="# ">
+              <i class="fa fa-truck "></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 productside-home ">
+        <img src="assets/images/l1p2.jpg " width="100% " />
+        <div class="product-info ">
+          <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+          <div class="pull-left price ">$19.00</div>
+          <div class="pull-right price ">
+            <a href="# ">
+              <i class="fa fa-truck "></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 productside-home ">
+        <img src="assets/images/l1p2.jpg " width="100% " />
+        <div class="product-info ">
+          <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+          <div class="pull-left price ">$19.00</div>
+          <div class="pull-right price ">
+            <a href="# ">
+              <i class="fa fa-truck "></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 no-padding review-head ">
+      <b>Product Reviews</b>
+      <div class="comment-sort ">
+        <span>
+          <i class="fa fa-sort comment-icon "></i>
+        </span>
+        <span class="wishlist-span ">Sort by</span>
+        <div class="ui inline dropdown ">
+          <div class="text ">Most Relevant</div>
+          <i class="dropdown icon "></i>
+          <div class="menu ">
+            <div class="header ">Latest</div>
+            <div class="active item " data-text="high ">Highest Rating</div>
+            <div class="item " data-text="low ">Lowest Rating</div>
+          </div>
+        </div>
+      </div>
+      <div class="comment-filter ">
+        <span>
+          <i class="fa fa-filter comment-icon "></i>
+        </span>
+        <span class="wishlist-span ">Filter by</span>
+        <div class="ui inline dropdown ">
+          <div class="text ">today</div>
+          <i class="dropdown icon "></i>
+          <div class="menu ">
+            <div class="header ">Adjust time span</div>
+            <div class="active item " data-text="today ">Today</div>
+            <div class="item " data-text="this week ">This Week</div>
+            <div class="item " data-text="this month ">This Month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--individual comment area -->
+    <div class="col-sm-12 review-content ">
+      <div class="review ">
+        <div class="star ">
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+        </div>
+        <span class="review-title ">Nice Fitted Cut</span>
+      </div>
+      <div class="review-person-area ">
+        <span class="review-person ">by Cheah Le Le</span>
+        <!-- the section below is only shown for the buyer of the product-->
+        <span>
+          <i class="fa fa-check-circle-o green "></i>
+        </span>
+        <span class="verified-span green ">Verified Purchase</span>
+        <!-- section end here -->
+      </div>
+      <div class="review-text-area ">
+        <p class="review-text ">A little too snug for XL size that I ordered. Suggest getting 1 size bigger than your usual for comfy fit.</p>
+      </div>
+      <div class="timing ">
+        <p>2 Weeks Ago</p>
+      </div>
+    </div>
+    <div class="col-sm-12 review-content ">
+      <div class="review ">
+        <div class="star ">
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+        </div>
+        <span class="review-title ">Nice Fitted Cut</span>
+      </div>
+      <div class="review-person-area ">
+        <span class="review-person ">by Cheah Le Le</span>
+        <!-- the section below is only shown for the buyer of the product-->
+        <span>
+          <i class="fa fa-check-circle-o green "></i>
+        </span>
+        <span class="verified-span green ">Verified Purchase</span>
+        <!-- section end here -->
+      </div>
+      <div class="review-text-area ">
+        <p class="review-text ">A little too snug for XL size that I ordered. Suggest getting 1 size bigger than your usual for comfy fit.</p>
+      </div>
+      <div class="timing ">
+        <p>2 Weeks Ago</p>
+      </div>
+    </div>
+    <div class="col-sm-12 review-content ">
+      <div class="review ">
+        <div class="star ">
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+        </div>
+        <span class="review-title ">Nice Fitted Cut</span>
+      </div>
+      <div class="review-person-area ">
+        <span class="review-person ">by Cheah Le Le</span>
+        <!-- the section below is only shown for the buyer of the product-->
+        <span>
+          <i class="fa fa-check-circle-o green "></i>
+        </span>
+        <span class="verified-span green ">Verified Purchase</span>
+        <!-- section end here -->
+      </div>
+      <div class="review-text-area ">
+        <p class="review-text ">A little too snug for XL size that I ordered. Suggest getting 1 size bigger than your usual for comfy fit.</p>
+      </div>
+      <div class="timing ">
+        <p>2 Weeks Ago</p>
+      </div>
+    </div>
+    <div class="col-sm-12 review-content ">
+      <div class="review ">
+        <div class="star ">
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+        </div>
+        <span class="review-title ">Nice Fitted Cut</span>
+      </div>
+      <div class="review-person-area ">
+        <span class="review-person ">by Cheah Le Le</span>
+        <!-- the section below is only shown for the buyer of the product-->
+        <span>
+          <i class="fa fa-check-circle-o green "></i>
+        </span>
+        <span class="verified-span green ">Verified Purchase</span>
+        <!-- section end here -->
+      </div>
+      <div class="review-text-area ">
+        <p class="review-text ">A little too snug for XL size that I ordered. Suggest getting 1 size bigger than your usual for comfy fit.</p>
+      </div>
+      <div class="timing ">
+        <p>2 Weeks Ago</p>
+      </div>
+    </div>
+    <div class="col-sm-12 review-content ">
+      <div class="review ">
+        <div class="star ">
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+          <a href="# ">
+            <i class="fa fa-star-o "></i>
+          </a>
+        </div>
+        <span class="review-title ">Nice Fitted Cut</span>
+      </div>
+      <div class="review-person-area ">
+        <span class="review-person ">by Cheah Le Le</span>
+        <!-- the section below is only shown for the buyer of the product-->
+        <span>
+          <i class="fa fa-check-circle-o green "></i>
+        </span>
+        <span class="verified-span green ">Verified Purchase</span>
+        <!-- section end here -->
+      </div>
+      <div class="review-text-area ">
+        <p class="review-text ">A little too snug for XL size that I ordered. Suggest getting 1 size bigger than your usual for comfy fit.</p>
+      </div>
+      <div class="timing ">
+        <p>2 Weeks Ago</p>
+      </div>
+    </div>
+    <!-- End of comment area -->
+  </div>
+  <div class="col-sm-3 no-padding sidebar ">
+    <p>Top Seller in Women’s Fashion Coats & Jacketst</p>
+    <div class="col-sm-8 col-sm-offset-2 productside-home ">
+      <img src="assets/images/l1p2.jpg " width="100% " />
+      <div class="product-info ">
+        <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+        <div class="pull-left price ">$19.00</div>
+        <div class="pull-right price ">
+          <a href="# ">
+            <i class="fa fa-truck "></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-2 productside-home ">
+      <img src="assets/images/l1p2.jpg " width="100% " />
+      <div class="product-info ">
+        <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+        <div class="pull-left price ">$19.00</div>
+        <div class="pull-right price ">
+          <a href="# ">
+            <i class="fa fa-truck "></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-2 productside-home ">
+      <img src="assets/images/l1p2.jpg " width="100% " />
+      <div class="product-info ">
+        <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+        <div class="pull-left price ">$19.00</div>
+        <div class="pull-right price ">
+          <a href="# ">
+            <i class="fa fa-truck "></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-2 productside-home ">
+      <img src="assets/images/l1p2.jpg " width="100% " />
+      <div class="product-info ">
+        <p>DAONSHOP Women`s pants collection / skinny jeans / destroyed jeans</p>
+        <div class="pull-left price ">$19.00</div>
+        <div class="pull-right price ">
+          <a href="# ">
+            <i class="fa fa-truck "></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<!-- End of Product Area -->

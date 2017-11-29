@@ -1,0 +1,61 @@
+<!-- Start Main Content Area -->
+
+<div class="login-background">
+  <div class="login-container">
+    <div class="col-xs-6 nopadding login-left">
+      <div class="login-form">
+        <p class="login-text">Create a new account!</p>
+        <form (ngSubmit)="register()" [formGroup]='registerForm' novalidate>
+          <input type="email" name="email" class="login-field email-field" formControlName="email" placeholder="Enter Your Email" required/>
+          <input type="password" name="password" class="login-field password-field" formControlName="password" placeholder="Enter Your Password"
+            required/>
+          <input type="text" class="login-field cfmpassword-field" formControlName="confirmPassword" placeholder="Re-enter Your Password"
+            required/>
+          <!-- <input type="text" class="login-field cfmpassword-field" formControlName="lastName" placeholder="Enter Your Last Name e.g. Smith"
+            required/> -->
+          <input type="text" class="login-field shopname-field" placeholder="Enter Your Shop Name" formControlName="shop" *ngIf='registerForm.value.userGroup'
+          />
+          <button [disabled]="!registerForm.valid&&loading" type="submit" class="login-button">submit</button>
+          <input type="checkbox" id="merchant" formControlName="userGroup" class="checker" checked='buyer' />
+          <label for="merchant">Toggle</label>
+          <span *ngIf='!registerForm.value.userGroup' class="check-text">Signing up as a Merchant?</span>
+          <span *ngIf='registerForm.value.userGroup' class="check-text">Signing up as a Buyer?</span>
+        </form>
+
+        <div class="bottom-reg">
+          <span class="newacc">
+            <a [routerLink]="['/user/login']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Already have an account?</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 nopadding login-right">
+      <h1>Sign in with your social network!</h1>
+      <a href="#">
+        <div class="social-box fb-bg">
+          Log in with facebook
+        </div>
+      </a>
+      <a href="#">
+        <div class="social-box google-bg">
+          Log in with Google+
+        </div>
+      </a>
+      <a href="#">
+        <div class="social-box twitter-bg">
+          Log in with twitter
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="or">
+  <h2>or</h2>
+</div>
+
+
+<div class="green-divider"></div>
+<!-- End Main Content Area -->
+
+<!-- Complicated code below
+ ================================================== -->

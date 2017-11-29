@@ -1,0 +1,158 @@
+<!-- Start of Top Bar -->
+<div class="top-header">
+  <div class="container">
+    <div class="pull-left">
+      <a [routerLink]="['cart']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="header-link">Download Apps</a>
+    </div>
+    <div class="pull-left">
+      <p> Follow Us On</p>
+      <a href="#">
+        <i class="fa fa-facebook-square"></i>
+      </a>
+      <a href="#">
+        <i class="fa fa-weixin"></i>
+      </a>
+    </div>
+    <div class="pull-right">
+      <a [routerLink]="['productlisting']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+        <i class="fa fa-commenting-o"></i>
+        <p>Need Help?</p>
+      </a>
+    </div>
+    <div class="shopping-cart-wrapper pull-right">
+      <a class="shopping-cart" [routerLink]="['shoppingcart']">
+        <i class="fa fa-shopping-cart"></i>
+        <p>My Cart</p>
+        <span class="badge">{{totalPriceAndQty?.count}}</span>
+      </a>
+      <!-- Start of Cart Dropdown -->
+      <div class="shopping-cart-dropdown container">
+        <div class="shopping-cart-header">
+          <i class="fa fa-shopping-cart cart-icon"></i>
+          <span class="badge">{{totalPriceAndQty?.count}}</span>
+          <div class="shopping-cart-total">
+            <span class="lighter-text">Total:</span>
+            <span class="main-color-text">${{totalPriceAndQty?.total}}</span>
+          </div>
+        </div>
+        <!--end shopping-cart-header -->
+        <ul class="shopping-cart-items">
+          <li class="clearfix" *ngFor='let items of cart'>
+            <div *ngFor='let item of items.variants'>
+              <img style="width:100%" [attr.src]="url+'/uploads/'+item.detail.thumbnail[0].imgName" alt="item1" />
+              <span class="item-name">{{item.productName}}</span>
+              <span class="item-price">$ {{item.detail.uP}}</span>
+              <span class="item-quantity">Quantity: {{item.qty}}</span>
+            </div>
+          </li>
+        </ul>
+        <div class="col-sm-6">
+          <a class="button" [routerLink]="['shoppingcart']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Cart</a>
+        </div>
+        <div class="col-sm-6">
+          <a [routerLink]="['/checkout']" class="button">Checkout</a>
+        </div>
+      </div>
+      <!--end shopping-cart -->
+
+      <!-- End of Cart Dropdown -->
+    </div>
+    <div *ngIf='!currentUser' class="pull-right">
+      <i class="fa fa-user"></i>
+      <a [routerLink]="['user/login']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+        <p>Sign In</p>
+      </a> |
+      <a [routerLink]="['user/register']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+        <p>Register</p>
+      </a>
+    </div>
+    <div *ngIf='currentUser' class=" pull-right">
+      <a (click)='logout()'>
+        <p>Hi! {{currentUser.email}}</p>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- End of Top Bar -->
+
+<!-- Start of Main Header -->
+<div class="header">
+  <div class="container">
+    <div class="col-sm-2 pull-left logo-area">
+      <a [routerLink]="['']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+        <img src="assets/images/logo.png" class="logo">
+      </a>
+    </div>
+    <div class="col-sm-9 col-md-offset-1 search-area">
+      <div class="col-xs-2 pull-right search-bar">
+        <button class="w100" [routerLink]="['products']">
+          <i class="fa fa-search search"></i>
+        </button>
+      </div>
+      <div class="col-sm-3 pull-right search-bar mobilehidden">
+        <div class="dropdown-search w100">
+          <span>Categories</span>
+          <div class="dropdown-content">
+            <div>
+              <span class="category-icon">w</span>
+              <a [routerLink]="['productlisting']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Women's Fashion</a>
+            </div>
+            <div>
+              <span class="category-icon">m</span>
+              <a href="#">Men's Fashion</a>
+            </div>
+            <div>
+              <span class="category-icon">b</span>
+              <a href="#">Baby & Kids</a>
+            </div>
+            <div>
+              <span class="category-icon">s</span>
+              <a href="#">Shoes, Bags & Accessories</a>
+            </div>
+            <div>
+              <span class="category-icon">c</span>
+              <a href="#">Beauty & Health</a>
+            </div>
+            <div>
+              <span class="category-icon">h</span>
+              <a href="#">Home & kitchen</a>
+            </div>
+            <div>
+              <span class="category-icon">p</span>
+              <a href="#">Sports & Outdoor</a>
+            </div>
+            <div>
+              <span class="category-icon">o</span>
+              <a href="#">Office & Stationery</a>
+            </div>
+            <div>
+              <span class="category-icon">f</span>
+              <a href="#">Food & diet</a>
+            </div>
+            <div>
+              <span class="category-icon">g</span>
+              <a href="#">Electronics/Motor</a>
+            </div>
+            <div>
+              <span class="category-icon">w</span>
+              <a href="#">Mobiles & Tablets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7 col-xs-10 pull-right search-bar">
+        <input class="w100" placeholder="Enter Your Search...">
+      </div>
+      <div class="popular-search">
+        <a href="#">Waterproof Bag</a>
+        <a href="#">The Ordinary</a>
+        <a href="#">Sexy Lingerine</a>
+        <a href="#">Waterproof Bag</a>
+        <a href="#">The Ordinary</a>
+        <a href="#">Sexy Lingerine</a>
+        <a href="#">Waterproof Bag</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Main Header -->

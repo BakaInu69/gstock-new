@@ -1,0 +1,294 @@
+/*
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+/\            /\/\           \/\            /\/          \/\/         /\   \/\/   /\/\/\/
+/\   \/\/\/\/\/\/    \/\/\/\/\/\/\/\/   /\/\/\    /\/\    /\/   /\/\/\/\   \/\   /\/\/\/\
+/\   \/\/\/\/\/\/   /\/\/\/\/\/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\   \    /\/\/\/\/
+/\   \/\      /\/            \/\/\/\/   /\/\/\   \/\/\/   /\/   /\/\/\/\       /\/\/\/\/\
+/\   \/\\/\   \/\/\/\/\/\/   /\/\/\/\   \/\/\/    \/\/    \/\   \/\/\/\/   /\   /\/\/\/\/
+/\            /\/           /\/\/\/\/   /\/\/\/          \/\/         /\   \/\   \/\/\/\/
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+CSS for Product Listing
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CONTENTS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+    1. PROD NAVBAR
+    2. PRE LISTING CONTENT
+    3. SIDEBAR CONTENT
+    4. PRODUCT
+    X. MOBILE RESPONSIVE
+
+
+
+
+/* =================================================================== */
+
+
+/* PROD NAVBAR SECTION
+====================================================================== */
+
+.inner-head-dropdown {
+  font-weight: 300;
+}
+
+.dropdown-category {
+  padding: 14px 25px 15px 35px;
+}
+
+.dropdown-container-head-inner {
+  padding-top: 0;
+  padding-bottom: 0
+}
+
+.bold-dropdown-content {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hot {
+  margin-top: 11px;
+}
+
+
+/* =================================================================== */
+
+
+/* PRE LISTING SECTION
+====================================================================== */
+
+.category-title {
+  background: #008d36;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 0;
+  margin-top: 12px;
+}
+
+.category-title>p {
+  margin: 0
+}
+
+.tabs-cont {
+  margin: 0;
+  margin-top: 10px;
+}
+
+ul.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+ul.tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+ul.tabs li.current {
+  background: #018d36;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  background: #ededed;
+  padding: 15px;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+
+/* =================================================================== */
+
+
+/* SIDEBAR  SECTION
+====================================================================== */
+
+.panel-title>a {
+  padding-left: 15px;
+}
+
+.panel-default {
+  border: none;
+}
+
+.panel-heading {
+  background: #fff;
+  border: none;
+  padding: 15px 15px;
+}
+
+.list-group {
+  border: none;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.panel-group {
+  margin-bottom: 5px;
+}
+
+ul.list-group>li {
+  padding-left: 50px;
+}
+
+.panel-title:before {
+  font-family: FontAwesome;
+  content: "\f0da";
+  color: #008d36;
+  float: left
+}
+
+.filter-title {
+  background: #008d36;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+.filter-title>p {
+  margin: 0
+}
+
+#priceslidercontainer {
+  padding: 15px;
+  padding-top: 0
+}
+
+.price-slider-amount {
+  position: relative
+}
+
+.price-slider-amount>.min {
+  float: left;
+  text-align: left
+}
+
+.price-slider-amount>.max {
+  float: right;
+  text-align: right
+}
+
+.dropbox-area {
+  padding: 15px 0;
+  ;
+  overflow: scroll;
+  height: 150px;
+}
+
+.dropbox-area>li.list-group-item {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 32px;
+}
+
+.filter-checkbox {
+  margin-right: 15px;
+}
+
+.dropdown-content {
+  top: 52px;
+}
+
+
+/* =================================================================== */
+
+
+/* PRODUCT SECTION
+====================================================================== */
+
+.productside-home {
+  padding: 0 4px
+}
+
+.product-info {
+  margin-top: 10px;
+  float: left;
+}
+
+.price {
+  color: #018d36;
+  font-size: 20px;
+}
+
+.review {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.like>a>i {
+  color: #888
+}
+
+a.fav>.fa+.fa,
+a.fav:hover>.fa {
+  display: none;
+}
+
+a.fav:hover>.fa+.fa {
+  display: inherit;
+  color: #ff0000;
+}
+
+.star>a>i {
+  color: #fbc02d;
+}
+
+ul.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+ul.tabs li {
+  background: none;
+  color: #222;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+ul.tabs li.current {
+  background: #018d36;
+  color: #fff;
+}
+
+li.sort {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.tab-content {
+  display: none;
+  background: #ededed;
+  padding: 15px;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+
+/* =================================================================== */
+
+
+/* MOBILE RESPONSIVE SECTION
+====================================================================== */
